@@ -16,15 +16,14 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bewegings
-onderwijs" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bewegings onderwijs" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
                     <rect key="frame" x="20" y="495" width="728" height="239"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
                     <color key="textColor" red="0.99607843137254903" green="0.31372549019607843" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" red="0.030542111024260521" green="0.057306945323944092" blue="0.019520264118909836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="shadowOffset" width="5" height="0.0"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="LudgerLogo" image="Ludger logo" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-G9-Sif">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="Ludgerlogo" image="Ludgerlogo" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-G9-Sif">
                     <rect key="frame" x="184" y="191" width="400" height="200"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -51,6 +50,6 @@ onderwijs" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines
         </view>
     </objects>
     <resources>
-        <image name="Ludger logo" width="718" height="718"/>
+        <image name="Ludgerlogo" width="718" height="718"/>
     </resources>
 </document>
