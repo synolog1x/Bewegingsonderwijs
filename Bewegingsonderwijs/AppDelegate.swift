@@ -15,8 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
         let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftViewController") as! LeftViewController
         let rightViewController = storyboard.instantiateViewController(withIdentifier: "RightViewController") as! RightViewController
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         
-        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        let nvc: UINavigationController = UINavigationController(rootViewController: loginViewController)
         
         UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
         
