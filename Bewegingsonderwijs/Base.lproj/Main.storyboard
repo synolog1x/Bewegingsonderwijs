@@ -103,7 +103,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="LoginButton:" destination="6ct-Kh-ldg" eventType="touchUpInside" id="yeF-Em-0dv"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="E87-P0-deZ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="K7h-gx-m8Z"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="LoginUitlegText" text="Log in met de inloggevens van je schoolaccount." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOc-f0-Pts">
