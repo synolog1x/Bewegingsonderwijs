@@ -1,9 +1,9 @@
 import UIKit
 
 enum LeftMenu: Int {
-    case opdrachten = 0
-    case boeken
-    case gegevens
+    case nav0 = 0
+    case nav1
+    case nav2
     case nav3
     case nonMenu
 }
@@ -12,10 +12,16 @@ protocol LeftMenuProtocol : class {
     func changeViewController(_ menu: LeftMenu)
 }
 
+//TODO: Klasse maken voor userbeheer!!! Volgende is voor testredenen.
+//0 is leerling, 1 is docent, 2 is beheerder
+public var UserLevel = 0
+
 class LeftViewController : UIViewController, LeftMenuProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["Opdrachten", "Boeken", "Gegevens", "Go", "NonMenu"]
+    
+    var menus = [""]
+    
     var mainViewController: UIViewController!
     var swiftViewController: UIViewController!
     var javaViewController: UIViewController!
@@ -30,10 +36,24 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //verander navigatietekst afhangend van userlevel
+        if UserLevel == 0 {
+           menus = ["Opdrachten", "Boeken", "Mijn Gegevens", "Go", "NonMenu"];
+        } else if UserLevel == 1 {
+            menus = ["Klassen", "Opdrachten toevoegen", "Mijn Gegevens"];
+        } else if UserLevel == 2 {
+            menus = ["Gebruikers", "Klassen", "Mijn Gegevens"];
+        }
+        
+        
+        
+        
+        
         //comment weghalen als je streepjes tussen de items wil
         //self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         let swiftViewController = storyboard.instantiateViewController(withIdentifier: "SwiftViewController") as! SwiftViewController
         self.swiftViewController = UINavigationController(rootViewController: swiftViewController)
         
@@ -65,11 +85,11 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     
     func changeViewController(_ menu: LeftMenu) {
         switch menu {
-        case .opdrachten:
+        case .nav0:
             self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
-        case .boeken:
+        case .nav1:
             self.slideMenuController()?.changeMainViewController(self.swiftViewController, close: true)
-        case .gegevens:
+        case .nav2:
             self.slideMenuController()?.changeMainViewController(self.javaViewController, close: true)
         case .nav3:
             self.slideMenuController()?.changeMainViewController(self.goViewController, close: true)
@@ -83,7 +103,7 @@ extension LeftViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let menu = LeftMenu(rawValue: indexPath.row) {
             switch menu {
-            case .opdrachten, .boeken, .gegevens, .nav3, .nonMenu:
+            case .nav0, .nav1, .nav2, .nav3, .nonMenu:
                 return BaseTableViewCell.height()
             }
         }
@@ -113,7 +133,7 @@ extension LeftViewController : UITableViewDataSource {
         
         if let menu = LeftMenu(rawValue: indexPath.row) {
             switch menu {
-            case .opdrachten, .boeken, .gegevens, .nav3, .nonMenu:
+            case .nav0, .nav1, .nav2, .nav3, .nonMenu:
                 let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
                 cell.setData(menus[indexPath.row])
                 return cell
