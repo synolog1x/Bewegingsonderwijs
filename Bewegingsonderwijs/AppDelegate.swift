@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
         let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftViewController") as! LeftViewController
         let rightViewController = storyboard.instantiateViewController(withIdentifier: "RightViewController") as! RightViewController
+        
+        
 
         
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
@@ -35,8 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
         self.createMenuView()
+        
+
+
+        
         
         return true
     }

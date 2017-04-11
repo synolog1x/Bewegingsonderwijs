@@ -12,7 +12,7 @@ protocol LeftMenuProtocol : class {
     func changeViewController(_ menu: LeftMenu)
 }
 
-//TODO: Klasse maken voor userbeheer!!! Volgende is voor testredenen.
+//TODO: Klasse maken voor userbeheer!!! Volgende is voor testredenen. Ook in MainViewController gebruikt.
 //0 is leerling, 1 is docent, 2 is beheerder
 public var UserLevel = 0
 
@@ -63,6 +63,8 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         let klassenViewController = storyboard.instantiateViewController(withIdentifier: "KlassenViewController") as! KlassenViewController
         self.klassenViewController = UINavigationController(rootViewController: klassenViewController)
         
+        
+        //laten staan voor eventuele uitbreiding: scherm zonder navigationdrawer
         let nonMenuController = storyboard.instantiateViewController(withIdentifier: "NonMenuController") as! NonMenuController
         nonMenuController.delegate = self
         self.nonMenuViewController = UINavigationController(rootViewController: nonMenuController)
@@ -84,18 +86,49 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     }
     
     func changeViewController(_ menu: LeftMenu) {
-        switch menu {
-        case .nav0:
-            self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
-        case .nav1:
-            self.slideMenuController()?.changeMainViewController(self.boekenViewController, close: true)
-        case .nav2:
-            self.slideMenuController()?.changeMainViewController(self.gegevensViewController, close: true)
-        case .nav3:
-            self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
-        case .nonMenu:
-            self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
+        if UserLevel == 0 {
+            switch menu {
+            case .nav0:
+                self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
+            case .nav1:
+                self.slideMenuController()?.changeMainViewController(self.boekenViewController, close: true)
+            case .nav2:
+                self.slideMenuController()?.changeMainViewController(self.gegevensViewController, close: true)
+            case .nav3:
+                self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
+            case .nonMenu:
+                self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
+            }
+        } else if UserLevel == 1 {
+            switch menu {
+            case .nav0:
+                self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
+            case .nav1:
+                self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
+            case .nav2:
+                self.slideMenuController()?.changeMainViewController(self.gegevensViewController, close: true)
+            case .nav3:
+                self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
+            case .nonMenu:
+                self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
+            }
+        } else if UserLevel == 2 {
+            switch menu {
+            case .nav0:
+                self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
+            case .nav1:
+                self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
+            case .nav2:
+                self.slideMenuController()?.changeMainViewController(self.gegevensViewController, close: true)
+            //laatste 2 overbodig
+            case .nav3:
+                self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
+            case .nonMenu:
+                self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
+            }
         }
+        
+        
     }
 }
 
