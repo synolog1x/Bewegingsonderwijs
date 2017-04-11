@@ -1,8 +1,4 @@
-//
-//  SlideMenuController.swift
-//
-//  Created by Yuji Hato on 12/3/14.
-//
+
 
 import Foundation
 import UIKit
@@ -208,7 +204,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     }
         
     open override func viewWillLayoutSubviews() {
-        // topLayoutGuideの値が確定するこのタイミングで各種ViewControllerをセットする
+        // topLayoutGuide
         setUpViewController(mainContainerView, targetViewController: mainViewController)
         setUpViewController(leftContainerView, targetViewController: leftViewController)
         setUpViewController(rightContainerView, targetViewController: rightViewController)

@@ -18,14 +18,14 @@ public var UserLevel = 0
 
 class LeftViewController : UIViewController, LeftMenuProtocol {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!		
     
     var menus = [""]
     
     var mainViewController: UIViewController!
-    var swiftViewController: UIViewController!
-    var javaViewController: UIViewController!
-    var goViewController: UIViewController!
+    var boekenViewController: UIViewController!
+    var gegevensViewController: UIViewController!
+    var klassenViewController: UIViewController!
     var nonMenuViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
     
@@ -38,7 +38,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         
         //verander navigatietekst afhangend van userlevel
         if UserLevel == 0 {
-           menus = ["Opdrachten", "Boeken", "Mijn Gegevens", "Go", "NonMenu"];
+           menus = ["Opdrachten", "Boeken", "Mijn Gegevens"];
         } else if UserLevel == 1 {
             menus = ["Klassen", "Opdrachten toevoegen", "Mijn Gegevens"];
         } else if UserLevel == 2 {
@@ -54,14 +54,14 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let swiftViewController = storyboard.instantiateViewController(withIdentifier: "SwiftViewController") as! SwiftViewController
-        self.swiftViewController = UINavigationController(rootViewController: swiftViewController)
+        let boekenViewController = storyboard.instantiateViewController(withIdentifier: "BoekenViewController") as! BoekenViewController
+        self.boekenViewController = UINavigationController(rootViewController: boekenViewController)
         
-        let javaViewController = storyboard.instantiateViewController(withIdentifier: "JavaViewController") as! JavaViewController
-        self.javaViewController = UINavigationController(rootViewController: javaViewController)
+        let gegevensViewController = storyboard.instantiateViewController(withIdentifier: "GegevensViewController") as! GegevensViewController
+        self.gegevensViewController = UINavigationController(rootViewController: gegevensViewController)
         
-        let goViewController = storyboard.instantiateViewController(withIdentifier: "GoViewController") as! GoViewController
-        self.goViewController = UINavigationController(rootViewController: goViewController)
+        let klassenViewController = storyboard.instantiateViewController(withIdentifier: "KlassenViewController") as! KlassenViewController
+        self.klassenViewController = UINavigationController(rootViewController: klassenViewController)
         
         let nonMenuController = storyboard.instantiateViewController(withIdentifier: "NonMenuController") as! NonMenuController
         nonMenuController.delegate = self
@@ -88,11 +88,11 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         case .nav0:
             self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
         case .nav1:
-            self.slideMenuController()?.changeMainViewController(self.swiftViewController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.boekenViewController, close: true)
         case .nav2:
-            self.slideMenuController()?.changeMainViewController(self.javaViewController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.gegevensViewController, close: true)
         case .nav3:
-            self.slideMenuController()?.changeMainViewController(self.goViewController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
         case .nonMenu:
             self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
         }

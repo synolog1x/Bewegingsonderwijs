@@ -2,7 +2,7 @@
 
 import UIKit
 
-class GoViewController: UIViewController {
+class KlassenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
