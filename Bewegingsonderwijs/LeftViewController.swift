@@ -94,6 +94,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
                 self.slideMenuController()?.changeMainViewController(self.boekenViewController, close: true)
             case .nav2:
                 self.slideMenuController()?.changeMainViewController(self.gegevensViewController, close: true)
+            //volgende 2 zijn momenteel niet nodig, staan er ivm uitbreidingsmogelijkheden.
             case .nav3:
                 self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
             case .nonMenu:
@@ -107,6 +108,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
                 self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
             case .nav2:
                 self.slideMenuController()?.changeMainViewController(self.gegevensViewController, close: true)
+            //volgende 2 zijn momenteel niet nodig, staan er ivm uitbreidingsmogelijkheden.
             case .nav3:
                 self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
             case .nonMenu:
@@ -120,7 +122,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
                 self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
             case .nav2:
                 self.slideMenuController()?.changeMainViewController(self.gegevensViewController, close: true)
-            //laatste 2 overbodig
+            //volgende 2 zijn momenteel niet nodig, staan er ivm uitbreidingsmogelijkheden.
             case .nav3:
                 self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
             case .nonMenu:

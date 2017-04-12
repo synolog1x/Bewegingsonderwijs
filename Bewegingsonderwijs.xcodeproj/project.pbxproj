@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				C5BA8AA41A43E24C00863FB9 /* Source */,
-				C539E6431A315E87003B7CC7 /* SlideMenuControllerSwift */,
+				C539E6431A315E87003B7CC7 /* Bewegingsonderwijs */,
 				C539E6421A315E87003B7CC7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C539E6431A315E87003B7CC7 /* SlideMenuControllerSwift */ = {
+		C539E6431A315E87003B7CC7 /* Bewegingsonderwijs */ = {
 			isa = PBXGroup;
 			children = (
 				C539E6461A315E87003B7CC7 /* AppDelegate.swift */,
@@ -155,7 +155,6 @@
 				C539E6481A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld */,
 				C539E6441A315E87003B7CC7 /* Supporting Files */,
 			);
-			name = SlideMenuControllerSwift;
 			path = Bewegingsonderwijs;
 			sourceTree = "<group>";
 		};
@@ -605,7 +604,7 @@
 				INFOPLIST_FILE = Bewegingsonderwijs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "dekatotoro.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = ludgercollege.bewegingsonderwijs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -620,7 +619,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "dekatotoro.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = ludgercollege.bewegingsonderwijs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
