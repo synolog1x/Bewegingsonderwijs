@@ -4,7 +4,12 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var mainContens = ["data1", "data2", "data3", "data4", "data5", "data6", "data7", "data8", "data9", "data10", "data11", "data12", "data13", "data14", "data15"]
+    //TODO: Klasse maken voor userbeheer!!! Volgende is voor testredenen. Ook in LeftViewController gebruikt.
+    //0 is leerling, 1 is docent, 2 is beheerder
+    public var UserLevel = 0
+
+    
+    var mainContens = ["Opdracht 1", "Opdracht 2", "Opdracht 3", "Opdracht 4", "Opdracht 5", "Opdracht 6", "Opdracht 7", "Opdracht 8", "Opdracht 9", "Opdracht 10", "Opdracht 11", "Opdracht 12", "Opdracht 13", "Opdracht 14", "Opdracht 15"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

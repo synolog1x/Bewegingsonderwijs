@@ -1,9 +1,9 @@
 import UIKit
 
 enum LeftMenu: Int {
-    case opdrachten = 0
-    case boeken
-    case gegevens
+    case nav0 = 0
+    case nav1
+    case nav2
     case nav3
     case nonMenu
 }
@@ -12,14 +12,20 @@ protocol LeftMenuProtocol : class {
     func changeViewController(_ menu: LeftMenu)
 }
 
+//TODO: Klasse maken voor userbeheer!!! Volgende is voor testredenen. Ook in MainViewController gebruikt.
+//0 is leerling, 1 is docent, 2 is beheerder
+public var UserLevel = 0
+
 class LeftViewController : UIViewController, LeftMenuProtocol {
     
-    @IBOutlet weak var tableView: UITableView!
-    var menus = ["Opdrachten", "Boeken", "Gegevens", "Go", "NonMenu"]
+    @IBOutlet weak var tableView: UITableView!		
+    
+    var menus = [""]
+    
     var mainViewController: UIViewController!
-    var swiftViewController: UIViewController!
-    var javaViewController: UIViewController!
-    var goViewController: UIViewController!
+    var boekenViewController: UIViewController!
+    var gegevensViewController: UIViewController!
+    var klassenViewController: UIViewController!
     var nonMenuViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
     
@@ -30,19 +36,35 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //verander navigatietekst afhangend van userlevel
+        if UserLevel == 0 {
+           menus = ["Opdrachten", "Boeken", "Mijn Gegevens"];
+        } else if UserLevel == 1 {
+            menus = ["Klassen", "Opdrachten toevoegen", "Mijn Gegevens"];
+        } else if UserLevel == 2 {
+            menus = ["Gebruikers", "Klassen", "Mijn Gegevens"];
+        }
+        
+        
+        
+        
+        
         //comment weghalen als je streepjes tussen de items wil
         //self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let swiftViewController = storyboard.instantiateViewController(withIdentifier: "SwiftViewController") as! SwiftViewController
-        self.swiftViewController = UINavigationController(rootViewController: swiftViewController)
         
-        let javaViewController = storyboard.instantiateViewController(withIdentifier: "JavaViewController") as! JavaViewController
-        self.javaViewController = UINavigationController(rootViewController: javaViewController)
+        let boekenViewController = storyboard.instantiateViewController(withIdentifier: "BoekenViewController") as! BoekenViewController
+        self.boekenViewController = UINavigationController(rootViewController: boekenViewController)
         
-        let goViewController = storyboard.instantiateViewController(withIdentifier: "GoViewController") as! GoViewController
-        self.goViewController = UINavigationController(rootViewController: goViewController)
+        let gegevensViewController = storyboard.instantiateViewController(withIdentifier: "GegevensViewController") as! GegevensViewController
+        self.gegevensViewController = UINavigationController(rootViewController: gegevensViewController)
         
+        let klassenViewController = storyboard.instantiateViewController(withIdentifier: "KlassenViewController") as! KlassenViewController
+        self.klassenViewController = UINavigationController(rootViewController: klassenViewController)
+        
+        
+        //laten staan voor eventuele uitbreiding: scherm zonder navigationdrawer
         let nonMenuController = storyboard.instantiateViewController(withIdentifier: "NonMenuController") as! NonMenuController
         nonMenuController.delegate = self
         self.nonMenuViewController = UINavigationController(rootViewController: nonMenuController)
@@ -64,18 +86,51 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     }
     
     func changeViewController(_ menu: LeftMenu) {
-        switch menu {
-        case .opdrachten:
-            self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
-        case .boeken:
-            self.slideMenuController()?.changeMainViewController(self.swiftViewController, close: true)
-        case .gegevens:
-            self.slideMenuController()?.changeMainViewController(self.javaViewController, close: true)
-        case .nav3:
-            self.slideMenuController()?.changeMainViewController(self.goViewController, close: true)
-        case .nonMenu:
-            self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
+        if UserLevel == 0 {
+            switch menu {
+            case .nav0:
+                self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
+            case .nav1:
+                self.slideMenuController()?.changeMainViewController(self.boekenViewController, close: true)
+            case .nav2:
+                self.slideMenuController()?.changeMainViewController(self.gegevensViewController, close: true)
+            //volgende 2 zijn momenteel niet nodig, staan er ivm uitbreidingsmogelijkheden.
+            case .nav3:
+                self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
+            case .nonMenu:
+                self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
+            }
+        } else if UserLevel == 1 {
+            switch menu {
+            case .nav0:
+                self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
+            case .nav1:
+                self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
+            case .nav2:
+                self.slideMenuController()?.changeMainViewController(self.gegevensViewController, close: true)
+            //volgende 2 zijn momenteel niet nodig, staan er ivm uitbreidingsmogelijkheden.
+            case .nav3:
+                self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
+            case .nonMenu:
+                self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
+            }
+        } else if UserLevel == 2 {
+            switch menu {
+            case .nav0:
+                self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
+            case .nav1:
+                self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
+            case .nav2:
+                self.slideMenuController()?.changeMainViewController(self.gegevensViewController, close: true)
+            //volgende 2 zijn momenteel niet nodig, staan er ivm uitbreidingsmogelijkheden.
+            case .nav3:
+                self.slideMenuController()?.changeMainViewController(self.klassenViewController, close: true)
+            case .nonMenu:
+                self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
+            }
         }
+        
+        
     }
 }
 
@@ -83,7 +138,7 @@ extension LeftViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let menu = LeftMenu(rawValue: indexPath.row) {
             switch menu {
-            case .opdrachten, .boeken, .gegevens, .nav3, .nonMenu:
+            case .nav0, .nav1, .nav2, .nav3, .nonMenu:
                 return BaseTableViewCell.height()
             }
         }
@@ -113,7 +168,7 @@ extension LeftViewController : UITableViewDataSource {
         
         if let menu = LeftMenu(rawValue: indexPath.row) {
             switch menu {
-            case .opdrachten, .boeken, .gegevens, .nav3, .nonMenu:
+            case .nav0, .nav1, .nav2, .nav3, .nonMenu:
                 let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
                 cell.setData(menus[indexPath.row])
                 return cell

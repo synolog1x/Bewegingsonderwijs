@@ -1,7 +1,7 @@
 
 import UIKit
 
-class JavaViewController: UIViewController {
+class GegevensViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

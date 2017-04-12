@@ -21,10 +21,10 @@
 		C5498C801BE897660076A7C5 /* ImageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5498C7F1BE897660076A7C5 /* ImageHeaderView.xib */; };
 		C5498C821BE8994F0076A7C5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5498C811BE8994F0076A7C5 /* UIImageView.swift */; };
 		C58671AC1E913EDD0093DEF0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C58671AA1E913EDD0093DEF0 /* LaunchScreen.xib */; };
+		C58671B41E994B360093DEF0 /* KlassenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58671B31E994B360093DEF0 /* KlassenViewController.swift */; };
 		C5BA8AA61A43E2EF00863FB9 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA8AA51A43E2EF00863FB9 /* SlideMenuController.swift */; };
-		C5BD39DA1A6CD12300D0AF95 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD39D91A6CD12300D0AF95 /* SwiftViewController.swift */; };
-		C5BD39DC1A6CD15700D0AF95 /* JavaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD39DB1A6CD15700D0AF95 /* JavaViewController.swift */; };
-		C5BD39DE1A6CD17B00D0AF95 /* GoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD39DD1A6CD17B00D0AF95 /* GoViewController.swift */; };
+		C5BD39DA1A6CD12300D0AF95 /* BoekenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD39D91A6CD12300D0AF95 /* BoekenViewController.swift */; };
+		C5BD39DC1A6CD15700D0AF95 /* GegevensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD39DB1A6CD15700D0AF95 /* GegevensViewController.swift */; };
 		C5BD39E01A6CDC8100D0AF95 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD39DF1A6CDC8100D0AF95 /* UIViewController.swift */; };
 		C5BF6A821BEEF1A70064C18E /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF6A811BEEF1A70064C18E /* DataTableViewCell.swift */; };
 		C5BF6A841BEEF1E70064C18E /* DataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5BF6A831BEEF1E70064C18E /* DataTableViewCell.xib */; };
@@ -39,6 +39,7 @@
 		C5F179CE1BEB2A5900EEDD9A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F179CD1BEB2A5900EEDD9A /* UIImage.swift */; };
 		C5F179D01BEB2CB500EEDD9A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F179CF1BEB2CB500EEDD9A /* UIView.swift */; };
 		C5F179D21BEB2FAF00EEDD9A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F179D11BEB2FAF00EEDD9A /* UIColor.swift */; };
+		D4B49ADC1E967412001C3E09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B49ADB1E967412001C3E09 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +70,10 @@
 		C5498C7F1BE897660076A7C5 /* ImageHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageHeaderView.xib; sourceTree = "<group>"; };
 		C5498C811BE8994F0076A7C5 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		C58671AB1E913EDD0093DEF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C58671B31E994B360093DEF0 /* KlassenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlassenViewController.swift; sourceTree = "<group>"; };
 		C5BA8AA51A43E2EF00863FB9 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Source/SlideMenuController.swift; sourceTree = "<group>"; };
-		C5BD39D91A6CD12300D0AF95 /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
-		C5BD39DB1A6CD15700D0AF95 /* JavaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaViewController.swift; sourceTree = "<group>"; };
-		C5BD39DD1A6CD17B00D0AF95 /* GoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoViewController.swift; sourceTree = "<group>"; };
+		C5BD39D91A6CD12300D0AF95 /* BoekenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoekenViewController.swift; sourceTree = "<group>"; };
+		C5BD39DB1A6CD15700D0AF95 /* GegevensViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GegevensViewController.swift; sourceTree = "<group>"; };
 		C5BD39DF1A6CDC8100D0AF95 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		C5BF6A811BEEF1A70064C18E /* DataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 		C5BF6A831BEEF1E70064C18E /* DataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataTableViewCell.xib; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		C5F179CD1BEB2A5900EEDD9A /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C5F179CF1BEB2CB500EEDD9A /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C5F179D11BEB2FAF00EEDD9A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D4B49ADB1E967412001C3E09 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				C5BA8AA41A43E24C00863FB9 /* Source */,
-				C539E6431A315E87003B7CC7 /* SlideMenuControllerSwift */,
+				C539E6431A315E87003B7CC7 /* Bewegingsonderwijs */,
 				C539E6421A315E87003B7CC7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,11 +143,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C539E6431A315E87003B7CC7 /* SlideMenuControllerSwift */ = {
+		C539E6431A315E87003B7CC7 /* Bewegingsonderwijs */ = {
 			isa = PBXGroup;
 			children = (
 				C539E6461A315E87003B7CC7 /* AppDelegate.swift */,
-				C5C1CE631A70F7C400B6E411 /* ViewController */,
+				C5C1CE631A70F7C400B6E411 /* ViewControllers */,
 				C5C1CE641A70F7EC00B6E411 /* View */,
 				C5C1CE621A70F7AA00B6E411 /* Extension */,
 				C539E6501A315E87003B7CC7 /* Images.xcassets */,
@@ -153,7 +155,6 @@
 				C539E6481A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld */,
 				C539E6441A315E87003B7CC7 /* Supporting Files */,
 			);
-			name = SlideMenuControllerSwift;
 			path = Bewegingsonderwijs;
 			sourceTree = "<group>";
 		};
@@ -173,6 +174,16 @@
 				C5BF6A831BEEF1E70064C18E /* DataTableViewCell.xib */,
 			);
 			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		C58671B81E9D205C0093DEF0 /* Navigatie */ = {
+			isa = PBXGroup;
+			children = (
+				C539E66B1A316C78003B7CC7 /* LeftViewController.swift */,
+				C539E66D1A316F5F003B7CC7 /* RightViewController.swift */,
+				C5BF6A8B1BF340020064C18E /* ExSlideMenuController.swift */,
+			);
+			name = Navigatie;
 			sourceTree = "<group>";
 		};
 		C5BA8AA41A43E24C00863FB9 /* Source */ = {
@@ -200,22 +211,21 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
-		C5C1CE631A70F7C400B6E411 /* ViewController */ = {
+		C5C1CE631A70F7C400B6E411 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C58671B81E9D205C0093DEF0 /* Navigatie */,
 				C539E64B1A315E87003B7CC7 /* MainViewController.swift */,
-				C539E66B1A316C78003B7CC7 /* LeftViewController.swift */,
-				C539E66D1A316F5F003B7CC7 /* RightViewController.swift */,
-				C5BD39D91A6CD12300D0AF95 /* SwiftViewController.swift */,
-				C5BD39DB1A6CD15700D0AF95 /* JavaViewController.swift */,
-				C5BD39DD1A6CD17B00D0AF95 /* GoViewController.swift */,
+				C5BD39D91A6CD12300D0AF95 /* BoekenViewController.swift */,
+				C5BD39DB1A6CD15700D0AF95 /* GegevensViewController.swift */,
 				C5C1CE5A1A70DADF00B6E411 /* NonMenuController.swift */,
+				C58671B31E994B360093DEF0 /* KlassenViewController.swift */,
 				C539E64D1A315E87003B7CC7 /* Main.storyboard */,
 				C5BF6A851BEF4C080064C18E /* SubContentsViewController.swift */,
 				C5BF6A891BF3335D0064C18E /* SubContentsViewController.storyboard */,
-				C5BF6A8B1BF340020064C18E /* ExSlideMenuController.swift */,
+				D4B49ADB1E967412001C3E09 /* LoginViewController.swift */,
 			);
-			name = ViewController;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C5C1CE641A70F7EC00B6E411 /* View */ = {
@@ -385,7 +395,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5BF6A8E1BF34A8B0064C18E /* UIApplication.swift in Sources */,
-				C5BD39DE1A6CD17B00D0AF95 /* GoViewController.swift in Sources */,
 				C539E64C1A315E87003B7CC7 /* MainViewController.swift in Sources */,
 				C5BD39E01A6CDC8100D0AF95 /* UIViewController.swift in Sources */,
 				C5C1CE611A70F3B600B6E411 /* UITableViewExtension.swift in Sources */,
@@ -396,17 +405,19 @@
 				C5BF6A821BEEF1A70064C18E /* DataTableViewCell.swift in Sources */,
 				C539E6471A315E87003B7CC7 /* AppDelegate.swift in Sources */,
 				C5F179D21BEB2FAF00EEDD9A /* UIColor.swift in Sources */,
+				D4B49ADC1E967412001C3E09 /* LoginViewController.swift in Sources */,
 				C5F179CE1BEB2A5900EEDD9A /* UIImage.swift in Sources */,
 				C5498C821BE8994F0076A7C5 /* UIImageView.swift in Sources */,
 				C5C1CE5B1A70DADF00B6E411 /* NonMenuController.swift in Sources */,
 				C5498C7E1BE897250076A7C5 /* ImageHeaderView.swift in Sources */,
 				C5BF6A861BEF4C080064C18E /* SubContentsViewController.swift in Sources */,
-				C5BD39DC1A6CD15700D0AF95 /* JavaViewController.swift in Sources */,
+				C5BD39DC1A6CD15700D0AF95 /* GegevensViewController.swift in Sources */,
+				C58671B41E994B360093DEF0 /* KlassenViewController.swift in Sources */,
 				C5BA8AA61A43E2EF00863FB9 /* SlideMenuController.swift in Sources */,
 				C539E66E1A316F5F003B7CC7 /* RightViewController.swift in Sources */,
 				C5C1CE5F1A70F2FD00B6E411 /* String.swift in Sources */,
 				C5F179D01BEB2CB500EEDD9A /* UIView.swift in Sources */,
-				C5BD39DA1A6CD12300D0AF95 /* SwiftViewController.swift in Sources */,
+				C5BD39DA1A6CD12300D0AF95 /* BoekenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +604,7 @@
 				INFOPLIST_FILE = Bewegingsonderwijs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "dekatotoro.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = ludgercollege.bewegingsonderwijs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -608,7 +619,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "dekatotoro.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = ludgercollege.bewegingsonderwijs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
